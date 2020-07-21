@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+function inc1(){
+var x = document.getElementById("text1").value;
+x++;
+document.getElementById("text1").value = x;
+var y =document.getElementById("text2").value;
+var z = y*x;
+document.getElementById("text3").value = z;
+}
+function dec1(){
+var x = document.getElementById("text1").value;
+x--;
+if(x<0)
+{
+document.getElementById("dec").style.disabled=true;
+x=0;
+}
+else
+document.getElementById("text1").value = x;
+var y =document.getElementById("text2").value;
+var z = x*y;
+document.getElementById("text3").value = z;
+}
+function rem1(){
+document.getElementById("prod").style.visibility="hidden";
+
+}
+
+
+</script>
+</head>
+
+<body>
+<div id=prod>
+<input type="button" value="+" id="inc" onclick="inc1();" /><br />
+<input type="button" value="-" id="dec" onclick="dec1();" /><br />
+<input type="button" value="remove" id="rem" onclick="rem1();" /><br />
+Enter quantity:<input type="text" placeholder="No. of products" id="text1" /><br />
+Enter  Price:<input type="text" placeholder="No. of products" id="text2" /><br />
+Total:<input type="text" placeholder="Total price" id="text3" />
+</div>
+</body>
+</html>
